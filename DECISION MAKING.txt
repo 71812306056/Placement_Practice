@@ -1,153 +1,77 @@
-#include<stdio.h>
-int main()
-{
-    int days;
-    scanf("%d",&days);
-    if(days==1)
-        printf("sunday");
-    else if(days==2)
-        printf("monday");
-    else if(days==3)
-        printf("tuesday");
-    else if(days==4)
-        printf("wednesday");
-    else if(days==5)
-        printf("thursday");
-    else if(days==6)
-        printf("friday");
-    else if(days==7)
-        printf("saturday");
-    else
-        printf("invalid");
-return 0;
+DECISION MAKING PROGRAMS:
 
-}
-
+1. SIMPLE CALCULATOR USING IF–ELSE:
 
 #include<stdio.h>
 int main()
 {
     int a,b;
     char ch;
-    scanf("%d%d %c",&a,&b,&ch);
-    if(ch == '+')
-        printf("sum %d", a+b);
-    else if(ch == '-')
-        printf("sub %d",a-b);
+    scanf("%d\n%d %c",&a,&b,&ch);
+    if (ch == '+')
+        printf("sum: %d",a+b);
+    else if(ch == '-' )
+        printf("difference: %d",a-b);
     else if(ch == '*')
-        printf("multiply %d",a*b);
-    else if(ch == '/')
-        printf("division %d",a/b);
+        printf("product: %d",a*b);
+     else if(ch == '/')
+        printf("quotient: %d",a/b);
     else if(ch == '%')
-        printf("modulo %d",a%b);
+        printf("remainder: %d",a%b);
     else
-        printf("invalid");
-return 0;
+        printf("INVALID");
+    return 0;
 }
+OUTPUT:
+12
+4
++
+sum: 16
+
+
+2. CHARACTER TYPE CHECKING:
 
 #include<stdio.h>
-int main()
-{
-    int days;
-    scanf("%d",&days);
-    if(days==1)
-        printf("sunday");
-    else if(days==2)
-        printf("monday");
-    else if(days==3)
-        printf("tuesday");
-    else if(days==4)
-        printf("wednesday");
-    else if(days==5)
-        printf("thursday");
-    else if(days==6)
-        printf("friday");
-    else if(days==7)
-        printf("saturday");
-    else
-        printf("invalid");
-return 0;
-
-}
-
-
-#include<stdio.h>
-int main()
-{
-    int a,b;
-    char ch;
-    scanf("%d%d %c",&a,&b,&ch);
-    if(ch == '+')
-        printf("sum %d", a+b);
-    else if(ch == '-')
-        printf("sub %d",a-b);
-    else if(ch == '*')
-        printf("multiply %d",a*b);
-    else if(ch == '/')
-        printf("division %d",a/b);
-    else if(ch == '%')
-        printf("modulo %d",a%b);
-    else
-        printf("invalid");
-return 0;
-}
-
-
 int main()
 {
     char ch;
     scanf("%c",&ch);
-    if(ch >='A'&& ch <='Z')
-        printf("uppercase");
-    else if(ch >='a' && ch<='z')
+    if (ch>='A' && ch<='Z')
+        printf("UPPERCASE");
+    else if(ch>='a' && ch<='z')
         printf("lowercase");
-    else if(ch >= '0' && ch <='9')
-        printf("digits");
+    else if(ch>='0' && ch<='9')
+        printf("Digit");
     else
-    printf("special character");
-return 0;
+        printf("Special characters");
+    return 0;
 }
+OUTPUT:
+a
+lowercase
 
 
-nested example
+3. FINDING THE GREATEST OF THREE NUMBERS:
 
 #include<stdio.h>
 int main()
 {
     int a,b,c;
-    scanf("%d%d%d",&a,&b,&c);
-    if(a>b)
-    {
-        if(a>c)
-            printf("a is greater");
-    }
-    else{
-        if(b>c)
-            printf("b is greater");
-           else printf("c is greater");
-    }
-return 0;
-}
-
-
-leap year or not
-
-#include<stdio.h>
-
-int main() {
-    int year;
-    printf("Enter a year: ");
-    scanf("%d", &year);
-    if ((year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0))) {
-        printf("%d is a leap year\n", year);
-    } else {
-        printf("%d is not a leap year\n", year);
-    }
-
+    scanf("%d\n%d\n%d",&a,&b,&c);
+    if (a>b && a>c)
+        printf("a is greater");
+    else if(b>a && b>c)
+        printf("b is greater");
+    else
+        printf("c is greater");
     return 0;
 }
+OUTPUT:
+34 56 78
+c is greater
 
 
+4. LEAP YEAR CHECKING USING NESTED IF:
 
 #include<stdio.h>
 int main()
@@ -166,159 +90,141 @@ int main()
         else
             printf(" not leap year");
     }
+    return 0;
+}
+OUTPUT:
+2000
+leap year
+
+
+5. DAY DISPLAY USING SWITCH CASE:
+
+#include<stdio.h>
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    switch(a)
+    {
+    case 1:
+        printf("sunday");
+        break;
+    case 2:
+        printf("monday");
+        break;
+    case 3:
+        printf("tuesday");
+        break;
+    case 4:
+        printf("wednesday");
+        break;
+    case 5:
+        printf("thursday");
+        break;
+    case 6:
+        printf("friday");
+        break;
+    case 7:
+        printf("saturday");
+        break;
+    }
+      return 0;
+}
+OUTPUT:
+5
+thursday
+
+
+6. CALCULATOR USING SWITCH CASE:
+
+#include<stdio.h>
+int main()
+{
+    int a,b;
+    char ch;
+    scanf("%d\n%d %c",&a,&b,&ch);
+    switch(ch)
+    {
+    case '+':
+        printf("sum %d\n",a+b);
+    case '-':
+        printf("difference %d\n",a-b);
+    case '*':
+        printf("product %d\n",a*b);
+    case 4:
+        printf("wednesday\n");
+    case 5:
+        printf("thursday\n");
+    case 6:
+        printf("friday\n");break;
+    case 7:
+        printf("saturday\n");
+    }
+      return 0;
+}
+OUTPUT:
+23 56
+-
+difference -33
+product 1288
+wednesday
+thursday
+friday
+
+
+7. DAY DISPLAY USING IF–ELSE LADDER:
+
+#include<stdio.h>
+int main()
+{
+    int days;
+    scanf("%d",&days);
+    if(days==1)
+        printf("sunday");
+    else if(days==2)
+        printf("monday");
+    else if(days==3)
+        printf("tuesday");
+    else if(days==4)
+        printf("wednesday");
+    else if(days==5)
+        printf("thursday");
+    else if(days==6)
+        printf("friday");
+    else if(days==7)
+        printf("saturday");
     else
-        printf("not a leap year");
-    return 0;
+        printf("invalid");
+return 0;
 }
+OUTPUT:
+4
+wednesday
 
 
+8. ARITHMETIC OPERATIONS USING IF–ELSE:
 
 #include<stdio.h>
 int main()
 {
-    int x;
-    scanf("%d",&x);
-    switch(x)
-    {
-    case 1:
-        printf("sunday");
-        break;
-    case 2:
-        printf("monday");
-        break;
-    case 3:
-        printf("tuesday");
-        break;
-    case 4:
-        printf("wednesday");
-        break;
-    case 5:
-        printf("thursday");
-        break;
-    case 6:
-        printf("friday");
-        break;
-    case 7:
-        printf("saturday");
-        break;
-    default:
-        printf("iinvalid");
-    }
-    return 0;
-
+    int a,b;
+    char ch;
+    scanf("%d%d %c",&a,&b,&ch);
+    if(ch == '+')
+        printf("sum %d", a+b);
+    else if(ch == '-')
+        printf("sub %d",a-b);
+    else if(ch == '*')
+        printf("multiply %d",a*b);
+    else if(ch == '/')
+        printf("division %d",a/b);
+    else if(ch == '%')
+        printf("modulo %d",a%b);
+    else
+        printf("invalid");
+return 0;
 }
-
-
-
-
-#include<stdio.h>
-int main()
-{
-    int x;
-    scanf("%d",&x);
-    switch(x)
-    {
-    case 1:
-        printf("sunday");
-        break;
-    case 2:
-        printf("monday");
-        break;
-    case 3:
-        printf("tuesday");
-        break;
-    case 4:
-        printf("wednesday");
-        break;
-    case 5:
-        printf("thursday");
-        break;
-    case 6:
-        printf("friday");
-        break;
-    case 7:
-        printf("saturday");
-        break;
-    default:
-        printf("iinvalid");
-    }
-    return 0;
-
-}
-
-
-#include<stdio.h>
-int main()
-{
-    int x;
-    scanf("%d",&x);
-    switch(x)
-    {
-    case 1:
-        printf("sunday");
-        break;
-    case 2:
-        printf("monday");
-        break;
-    case 3:
-        printf("tuesday");
-        break;
-    case 4:
-        printf("wednesday");
-        break;
-    case 5:
-        printf("thursday");
-        break;
-    case 6:
-        printf("friday");
-        break;
-    case 7:
-        printf("saturday");
-        break;
-    default:
-        printf("iinvalid");
-    }
-    return 0;
-
-}
-
-
-
-
-#include<stdio.h>
-int main()
-{
-    int x;
-    scanf("%d",&x);
-    switch(x)
-    {
-    case 1:
-        printf("sunday");
-        break;
-    case 2:
-        printf("monday");
-        break;
-    case 3:
-        printf("tuesday");
-        break;
-    case 4:
-        printf("wednesday");
-        break;
-    case 5:
-        printf("thursday");
-        break;
-    case 6:
-        printf("friday");
-        break;
-    case 7:
-        printf("saturday");
-        break;
-    default:
-        printf("iinvalid");
-    }
-    return 0;
-
-}
-
-
-
+OUTPUT:
+35 7
+%
+modulo 0
