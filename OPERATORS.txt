@@ -1,0 +1,142 @@
+1) ARITHMETIC OPERATORS
+
+#include <stdio.h>
+int main() {
+    int a = 25, b = 5;
+    printf("a + b = %d\n", a + b);
+    printf("a - b = %d\n", a - b);
+    printf("a * b = %d\n", a * b);
+    printf("a / b = %d\n", a / b);
+    printf("a %% b = %d\n", a % b);
+    printf("+a = %d\n", +a);
+    printf("-a = %d\n", -a);
+    printf("a++ = %d\n", a++);
+    printf("a-- = %d\n", a--);
+    return 0;
+}
+
+OUTPUT:
+a + b = 30
+a - b = 20
+a * b = 125
+a / b = 5
+a % b = 0
++a = 25
+-a = -25
+a++ = 25
+a-- = 26
+
+2) RELATIONAL OPERATORS
+
+#include <stdio.h>
+int main() {
+    int a = 25, b = 5;
+    printf("a < b  : %d\n", a < b);
+    printf("a > b  : %d\n", a > b);
+    printf("a <= b: %d\n", a <= b);
+    printf("a >= b: %d\n", a >= b);
+    printf("a == b: %d\n", a == b);
+    printf("a != b : %d\n", a != b);
+    return 0;
+}
+
+OUTPUT:
+a < b  : 0
+a > b  : 1
+a <= b: 0
+a >= b: 1
+a == b: 0
+a != b : 1
+
+3) LOGICAL OPERATORS
+
+#include <stdio.h>
+
+int main() {
+    int a = 25, b = 5;
+    printf("a && b : %d\n", a && b);
+    printf("a || b : %d\n", a || b);
+    printf("!a: %d\n", !a);
+    return 0;
+}
+
+OUTPUT:
+a && b : 1
+a || b : 1
+!a: 0
+
+4) BITWISE OPERATORS
+
+#include <stdio.h>
+int main() {
+    int a = 25, b = 5;
+    printf("a & b: %d\n", a & b);
+    printf("a | b: %d\n", a | b);
+    printf("a ^ b: %d\n", a ^ b);
+    printf("~a: %d\n", ~a);
+    printf("a >> b: %d\n", a >> b);
+    printf("a << b: %d\n", a << b);
+    return 0;
+}
+
+OUTPUT:
+a & b: 1
+a | b: 29
+a ^ b: 28
+~a: -26
+a >> b: 0
+a << b: 800
+
+5) ASSIGNMENT OPERATORS
+
+#include <stdio.h>
+int main() {
+    int a = 25, b = 5;
+    printf("a = b: %d\n", a = b);
+    printf("a += b: %d\n", a += b);
+    printf("a -= b: %d\n", a -= b);
+    printf("a *= b: %d\n", a *= b);
+    printf("a /= b: %d\n", a /= b);
+    printf("a %%= b: %d\n", a %= b);
+    printf("a &= b: %d\n", a &= b);
+    printf("a |= b: %d\n", a |= b);
+    printf("a ^= b: %d\n", a ^= b);
+    printf("a >>= b: %d\n", a >>= b); 
+    printf("a <<= b: %d\n", a <<= b);
+    return 0;
+}
+
+OUTPUT:
+a = b: 5
+a += b: 10
+a -= b: 5
+a *= b: 25
+a /= b: 5
+a %= b: 0
+a &= b: 0
+a |= b: 5
+a ^= b: 0
+a >>= b: 0
+a <<= b: 0
+
+6) C PROGRAM TO DEMONSTRATE THE USE OF MISC OPERATORS
+
+#include <stdio.h>
+int main()
+{
+    int num = 10;
+    int* add_of_num = &num;
+    printf("sizeof(num) = %d bytes\n", sizeof(num));
+    printf("&num = %p\n", &num);
+    printf("*add_of_num = %d\n", *add_of_num);
+    printf("(10 < 5) ? 10 : 20 = %d\n", (10 < 5) ? 10 : 20);
+    printf("(float)num = %f\n", (float)num);
+    return 0;
+}
+
+OUTPUT:
+sizeof(num) = 4 bytes
+&num = 0x7ffdb58c037c
+*add_of_num = 10
+(10 < 5) ? 10 : 20 = 20
+(float)num = 10.000000
