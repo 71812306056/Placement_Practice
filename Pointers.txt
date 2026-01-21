@@ -1,0 +1,155 @@
+POINTERS:
+
+1. UNDERSTANDING BASIC POINTER USAGE:
+
+#include<stdio.h>
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    int *ptr;
+    ptr = &a;
+    printf("a is %d\n",a);
+    printf("Pointer value %d\n",*ptr);
+    printf("ptr value %u\n",ptr);
+    printf("Memory address %u\n",&a);
+    printf("pointer memory address %u\n",&ptr);
+}
+OUTPUT:
+56
+a is 56
+Pointer value 56
+ptr value 2313158140
+Memory address 2313158140
+pointer memory address 2313158128
+
+
+
+2. UPDATING A VARIABLE USING A POINTER:
+
+#include<stdio.h>
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    int *ptr;
+    ptr = &a;
+    *ptr+=10;
+    printf("a is %d\n",a);
+    printf("Pointer value %d\n",*ptr);
+    printf("ptr value %u\n",ptr);
+    printf("Memory address %u\n",&a);
+    printf("pointer memory address %u\n",&ptr);
+}
+OUTPUT:
+30
+a is 40
+Pointer value 40
+ptr value 4085251116
+Memory address 4085251116
+pointer memory address 4085251104
+
+
+3. INTEGER POINTER ARITHMETIC:
+
+#include<stdio.h>
+int main()
+{
+    int a=10;
+    int *ptr;
+    ptr = &a;
+    printf("a is %d\n",a);
+    printf("%u\n",ptr);
+    printf("%u\n",ptr+1);
+}
+OUTPUT:
+a is 10
+1243609924
+1243609928
+
+
+4. CHARACTER POINTER ARITHMETIC:
+
+#include<stdio.h>
+int main()
+{
+    char ch='A';
+    char *ptr;
+    ptr = &ch;
+    printf("character is %c\n",ch);
+    printf("%u\n",ptr);
+    printf("%u\n",ptr+2);
+}
+OUTPUT:
+character is A
+4051696743
+4051696745
+
+
+5. POINTER OFFSET AND SIZE COMPARISON:
+
+#include<stdio.h>
+int main()
+{
+    int a=10;
+    int *ptr;
+    ptr = &a;
+    *(ptr+3)=256;
+    printf("a is %d\n",a);
+    printf("%u\n",ptr+3);
+    printf("%d\n",*(ptr+3));
+    printf("sizeof pointer value %d\n",sizeof(*ptr));
+    printf("sizeof pointer reference %d\n",sizeof(ptr));
+}
+OUTPUT:
+a is 10
+459274320
+256
+sizeof pointer value 4
+sizeof pointer reference 8
+
+
+6. POINTER SIZE VS CHARACTER DATA SIZE:
+
+#include<stdio.h>
+int main()
+{
+    char ch='A';
+    char *ptr;
+    ptr = &ch;
+    printf("character is %c\n",ch);
+    printf("%u\n",ptr);
+    printf("%d\n",ptr+2);
+    printf("sizeof pointer value %d\n",sizeof(*ptr));
+    printf("sizeof pointer reference %d\n",sizeof(ptr));
+}
+OUTPUT:
+character is A
+1491073207
+1491073209
+sizeof pointer value 1
+
+
+7. BASIC DOUBLE POINTER CONCEPT:
+
+#include <stdio.h>
+int main()
+{
+    int a = 10;
+    int *ptr;
+    ptr = &a;
+    printf("%d\n", *ptr);
+    int **ptr1;
+    ptr1 = &ptr;
+    printf("%u\n", &a);
+    printf("%u", ptr1);
+    return 0;
+}
+OUTPUT:
+10
+884996852
+884996840
+
+
+
+
