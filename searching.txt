@@ -1,0 +1,181 @@
+1) LINEAR SEARCH
+
+#include<stdio.h>
+int main()
+{
+    int size;
+    scanf("%d",&size);
+    int arr[size];
+    for(int i=0;i<size;i++)
+        scanf("%d",&arr[i]);
+    int key,i;
+    scanf("%d",&key);
+    for(i=0;i<size;i++)
+    {
+        if(arr[i]==key)
+        break;
+    }
+    if(i<size)
+        printf("Element found at %d",i);
+    else
+        printf("Not found");
+}
+
+OUTPUT:
+5
+1 2 3 6 7
+3
+Element found at 2
+
+2)BINARY SEARCH
+
+#include<stdio.h>
+int main()
+{
+int size;
+scanf("%d",&size);
+int arr[size];
+for(int i=0;i<size;i++)
+scanf("%d",&arr[i]);
+int key,i;
+scanf("%d",&key);
+int start = 0, end = size - 1, mid =-1;
+while(start <= end)
+{
+    mid = (start + end) / 2;
+
+    if(arr[mid] == key)
+        break;
+    else
+    {
+        if(arr[mid] < key)
+            start = mid + 1;
+        else
+            end = mid - 1;
+    }
+}
+if(start <= end)
+    printf("element found at %d",mid);
+else
+    printf("not found");
+return 0;
+}
+
+OUTPUT:
+10
+1 2 3 4 5 6 7 8 9 10
+5
+element found at 4
+
+3) MAXIMUM ELEMENT IN ARRAY
+
+#include <stdio.h>
+int main()
+{
+    int size;
+    scanf("%d", &size);
+    int arr[size];
+    for(int i = 0; i < size; i++)
+        scanf("%d", &arr[i]);
+    int max = arr[0];
+    for(int i = 1; i < size; i++)
+    {
+        if(arr[i] > max)
+        {
+            max = arr[i];
+        }
+    }
+    printf("Max number is %d", max);
+    return 0;
+}
+
+OUTPUT:
+6
+1 4 5 6 7 8
+Max number is 8
+
+4) MININMUM ELEMENT IN ARRAY
+
+#include <stdio.h>
+int main()
+{
+    int size;
+    scanf("%d", &size);
+    int arr[size];
+    for(int i = 0; i < size; i++)
+        scanf("%d", &arr[i]);
+    int min = arr[0];
+    for(int i = 1; i < size; i++)
+    {
+        if(arr[i] < min)
+        {
+            min = arr[i];
+        }
+    }
+    printf("Min number is %d", min);
+    return 0;
+}
+
+OUTPUT:
+6
+32 45 67 87 90 55
+Min number is 32
+
+5) MAXIMUM AND MINIMUM ELEMENT IN ARRAY
+
+#include <stdio.h>
+int main()
+{
+    int size;
+    scanf("%d", &size);
+    int arr[size];
+    for(int i = 0; i < size; i++)
+        scanf("%d", &arr[i]);
+    int min = arr[0],max=arr[0];
+    for(int i = 1; i < size; i++)
+    {
+        if(arr[i] > max)
+            max= arr[i];
+        if(arr[i] < min)
+            min = arr[i];
+    }
+    printf("Max number is %d\n",max);
+    printf("Min number is %d\n", min);
+    return 0;
+}
+
+OUTPUT:
+7
+19 -13 -191 98 -45 12 37
+Max number is 98
+Min number is -191
+
+6) ARRAY SUM REPLACEMENT
+
+#include <stdio.h>
+int main()
+{
+    int size,new;
+    scanf("%d", &size);
+    int arr[size];
+    for(int i = 0; i < size; i++)
+        scanf("%d", &arr[i]);
+    int sum=0;
+    for(int i=0;i< size;i++)
+    {
+        sum=sum+arr[i];
+    }
+    for(int i=0;i<size;i++)
+    {
+    new=sum-arr[i];
+    printf("%d ",new);
+    }
+}
+
+OUTPUT:
+5
+10  20 30 40 50
+140 130 120 110 100
+6
+1 2 3 4 5 6
+20 19 18 17 16 15
