@@ -1,0 +1,324 @@
+#include<stdio.h>
+int main()
+{
+    int days;
+    scanf("%d",&days);
+    if(days==1)
+        printf("sunday");
+    else if(days==2)
+        printf("monday");
+    else if(days==3)
+        printf("tuesday");
+    else if(days==4)
+        printf("wednesday");
+    else if(days==5)
+        printf("thursday");
+    else if(days==6)
+        printf("friday");
+    else if(days==7)
+        printf("saturday");
+    else
+        printf("invalid");
+return 0;
+
+}
+
+
+#include<stdio.h>
+int main()
+{
+    int a,b;
+    char ch;
+    scanf("%d%d %c",&a,&b,&ch);
+    if(ch == '+')
+        printf("sum %d", a+b);
+    else if(ch == '-')
+        printf("sub %d",a-b);
+    else if(ch == '*')
+        printf("multiply %d",a*b);
+    else if(ch == '/')
+        printf("division %d",a/b);
+    else if(ch == '%')
+        printf("modulo %d",a%b);
+    else
+        printf("invalid");
+return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+    int days;
+    scanf("%d",&days);
+    if(days==1)
+        printf("sunday");
+    else if(days==2)
+        printf("monday");
+    else if(days==3)
+        printf("tuesday");
+    else if(days==4)
+        printf("wednesday");
+    else if(days==5)
+        printf("thursday");
+    else if(days==6)
+        printf("friday");
+    else if(days==7)
+        printf("saturday");
+    else
+        printf("invalid");
+return 0;
+
+}
+
+
+#include<stdio.h>
+int main()
+{
+    int a,b;
+    char ch;
+    scanf("%d%d %c",&a,&b,&ch);
+    if(ch == '+')
+        printf("sum %d", a+b);
+    else if(ch == '-')
+        printf("sub %d",a-b);
+    else if(ch == '*')
+        printf("multiply %d",a*b);
+    else if(ch == '/')
+        printf("division %d",a/b);
+    else if(ch == '%')
+        printf("modulo %d",a%b);
+    else
+        printf("invalid");
+return 0;
+}
+
+
+int main()
+{
+    char ch;
+    scanf("%c",&ch);
+    if(ch >='A'&& ch <='Z')
+        printf("uppercase");
+    else if(ch >='a' && ch<='z')
+        printf("lowercase");
+    else if(ch >= '0' && ch <='9')
+        printf("digits");
+    else
+    printf("special character");
+return 0;
+}
+
+
+nested example
+
+#include<stdio.h>
+int main()
+{
+    int a,b,c;
+    scanf("%d%d%d",&a,&b,&c);
+    if(a>b)
+    {
+        if(a>c)
+            printf("a is greater");
+    }
+    else{
+        if(b>c)
+            printf("b is greater");
+           else printf("c is greater");
+    }
+return 0;
+}
+
+
+leap year or not
+
+#include<stdio.h>
+
+int main() {
+    int year;
+    printf("Enter a year: ");
+    scanf("%d", &year);
+    if ((year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0))) {
+        printf("%d is a leap year\n", year);
+    } else {
+        printf("%d is not a leap year\n", year);
+    }
+
+    return 0;
+}
+
+
+
+#include<stdio.h>
+int main()
+{
+    int year;
+    scanf("%d",&year);
+    if (year%4==0)
+    {
+        if (year%100==0)
+        {
+            if (year%400==0)
+                printf("leap year");
+            else
+                printf("not a leap year");
+        }
+        else
+            printf(" not leap year");
+    }
+    else
+        printf("not a leap year");
+    return 0;
+}
+
+
+
+#include<stdio.h>
+int main()
+{
+    int x;
+    scanf("%d",&x);
+    switch(x)
+    {
+    case 1:
+        printf("sunday");
+        break;
+    case 2:
+        printf("monday");
+        break;
+    case 3:
+        printf("tuesday");
+        break;
+    case 4:
+        printf("wednesday");
+        break;
+    case 5:
+        printf("thursday");
+        break;
+    case 6:
+        printf("friday");
+        break;
+    case 7:
+        printf("saturday");
+        break;
+    default:
+        printf("iinvalid");
+    }
+    return 0;
+
+}
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int x;
+    scanf("%d",&x);
+    switch(x)
+    {
+    case 1:
+        printf("sunday");
+        break;
+    case 2:
+        printf("monday");
+        break;
+    case 3:
+        printf("tuesday");
+        break;
+    case 4:
+        printf("wednesday");
+        break;
+    case 5:
+        printf("thursday");
+        break;
+    case 6:
+        printf("friday");
+        break;
+    case 7:
+        printf("saturday");
+        break;
+    default:
+        printf("iinvalid");
+    }
+    return 0;
+
+}
+
+
+#include<stdio.h>
+int main()
+{
+    int x;
+    scanf("%d",&x);
+    switch(x)
+    {
+    case 1:
+        printf("sunday");
+        break;
+    case 2:
+        printf("monday");
+        break;
+    case 3:
+        printf("tuesday");
+        break;
+    case 4:
+        printf("wednesday");
+        break;
+    case 5:
+        printf("thursday");
+        break;
+    case 6:
+        printf("friday");
+        break;
+    case 7:
+        printf("saturday");
+        break;
+    default:
+        printf("iinvalid");
+    }
+    return 0;
+
+}
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int x;
+    scanf("%d",&x);
+    switch(x)
+    {
+    case 1:
+        printf("sunday");
+        break;
+    case 2:
+        printf("monday");
+        break;
+    case 3:
+        printf("tuesday");
+        break;
+    case 4:
+        printf("wednesday");
+        break;
+    case 5:
+        printf("thursday");
+        break;
+    case 6:
+        printf("friday");
+        break;
+    case 7:
+        printf("saturday");
+        break;
+    default:
+        printf("iinvalid");
+    }
+    return 0;
+
+}
+
+
+
